@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>prodotti</title>
+<STYLE type=text/css>#content {
+	POSITION: absolute
+} 
+</style>
+
+<script language="javascript" src="scroller.js"></script>
+<script language="javascript" src="layer.js"></script>
+
+<script language="JavaScript">
+
+function posizionaLayer(imm,lay,sx,su)
+{sNomeImgSegna=imm;
+imgSegna=getImage(imm);
+moveLayerTo(getLayer(lay),getImagePageLeft(imgSegna)+sx,getImagePageTop(imgSegna)+su)
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function init()
+  {
+    for(i=0; i<document.links.length; i++)
+	  {
+	    document.links[i].onfocus = function() { this.blur(); }
+	  }
+  }
+
+</script>
+
+<link rel="stylesheet" href="general.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" scroll="no" onLoad="larg();eventLoader();init();" onresize="self.location.reload()">
+
+<!-- TITLE -->
+
+<DIV STYLE="position:absolute;top:152px;left:14px;font-family:arial; color: #6d6d6d;font-weight: bold; font-size: 12pt;z-index: 20;">
+
+<script language="Javascript">
+document.writeln(document.location.search.substring(1,document.location.search.length).toUpperCase());
+</script>
+
+</DIV>
+
+<!-- SUB-TITLE -->
+
+<DIV STYLE="position: absolute;	top: 128px;left: 14px; font-family: arial;color: #6d6d6d; font-weight: normal; font-size: 10px;z-index: 20;">
+<img src="images/punti.gif" hspace=2 align=absbottom>facce <img src="images/punti.gif" hspace=2 align=absbottom>umori
+</DIV>
+
+<script language="Javascript">
+
+var r = parseInt(Math.random()*top.DESTRA_TOP);
+r = r || 0;
+document.writeln('<DIV ID="TOPIMAGE" NAME="TOPIMAGE" CLASS="TOPIMAGE"><img src="' + 'images/right_top/' + r + '.jpg' + '"></DIV>');
+
+</script>
+
+<SPAN STYLE="position:absolute; top:10; left:0; width:351; height:385; z-index:0;"><img src="images/finestra_destra.gif" width=351 height=385></SPAN>
+
+<!-- BOTTOM BUTTON -->
+
+<DIV STYLE="position:absolute; top:379; left:7; color:#000000; font-family:Arial,Verdana; font-size:10px; z-index:1000;">persone</DIV>
+
+<SPAN id=up style="Z-INDEX: 2; LEFT: 328px; WIDTH: 15px; POSITION: absolute; TOP: 176px; HEIGHT: 15px"><a href="#"><img src="images/scroller/up.gif" width="5" height="6" border="0"></a></SPAN> 
+<!-- div containing down-arrow | change: top + left -->
+<SPAN id=down style="Z-INDEX: 3; LEFT: 328px; WIDTH: 15px; POSITION: absolute; TOP: 295px; HEIGHT: 15px"><a href="#"><img src="images/scroller/down.gif" width="5" height="6" border="0"></a></SPAN> 
+<!-- div containing scrollbar | change: top + left + width + height -->
+<SPAN id=drag style="Z-INDEX: 4; LEFT: 328px; WIDTH: 11px; POSITION: absolute; TOP: 184px; HEIGHT: 7px;"><a href="#"><img src="images/scroller/barra.gif" width="5" height="7" border="0"></a></SPAN> 
+<!-- line -->
+<SPAN style="Z-INDEX: 2; LEFT: 328px; WIDTH: 1px; POSITION: absolute; TOP: 184px; HEIGHT: 109px;"><a href="#"><img src="images/barra_vertical.gif" width="1" height="109" border="0" hspace=2></a></SPAN> 
+<!-- div laying above scrollbar for netscape 6 protection | change: top + left + width + height -->
+<SPAN id=ruler style="Z-INDEX: 5; LEFT: 328px; WIDTH: 11px; POSITION: absolute; TOP: 184px; HEIGHT: 109px; visibility: visible"></SPAN> 
+
+<!-- IL TESTO SI METTE DENTRO QUI!!!!!!!!!! -->
+<SPAN id=contentClip style="Z-INDEX: 1; LEFT: 10px; OVERFLOW: hidden; WIDTH: 300px; POSITION: absolute; TOP: 178px; visibility: visible"><SPAN id=content STYLE="position: absolute;top:0;left:0;font-family:Arial,Verdana;color: #232323;font-weight: normal;font-size: 10px;"}> 
+	  
+<table width="300" border="0" cellpadding="1" cellspacing="0">
+  <tr>
+	<td width="1%" align="left" valign="top"><img src="contenuti/img/trasp.gif" width="5" height="7" alt="" border="0">&nbsp;</td> 
+    <td class="testog" align="left" valign="top">Shena s.r.l - Via Brozzoni, 9<br>
+      25125 Brescia - Italia<br>
+      Telefono 030.22.34.311<br>
+      Fax 030.22.34.342<br>
+      Mail:<a class="b" href="mailto:info@shena.it">info@shena.it</a></td>
+  </tr>
+  <tr> 
+    <td colspan="2" class="testog">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="1%" align="left" valign="top"><img src="contenuti/img/freccia.gif" border="0">&nbsp;</td>
+    <td class="testog" align="left" valign="top">Direttore generale: Flavio Minari<br>mail:<a class="b" href="mailto:fminari@shena.it">fminari@shena.it</a></td>
+  </tr>
+  <tr> 
+    <td colspan="2" class="testog">&nbsp;</td>
+  </tr>
+  <tr> 
+  <td width="1%" align="left" valign="top"><img src="contenuti/img/freccia.gif" border="0">&nbsp;</td>
+    <td class="testog" align="left" valign="top">Direttore commerciale: Andrea Guerrini<br>mail:<a class="b" href="mailto:aguerrini@shena.it">aguerrini@shena.it</a></td>
+  </tr>
+  <tr> 
+    <td colspan="2" class="testog">&nbsp;</td>
+  </tr>
+  <tr> 
+  <td width="1%" align="left" valign="top"><img src="contenuti/img/freccia.gif" border="0">&nbsp;</td>
+    <td class="testog" align="left" valign="top">Direttore marketing: Mauro Brambilla<br>mail:<a class="b" href="mailto:mauro@shena.it">mauro@shena.it</a></td>
+  </tr>
+  <tr> 
+    <td colspan="2" class="testog">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="1%" align="left" valign="top"><img src="contenuti/img/freccia.gif" border="0">&nbsp;</td>
+    <td class="testog" align="left" valign="top">Direttore creativo: Vincenzo D'Abbraccio<br>mail:<a class="b" href="mailto:vindab@shena.it">vindab@shena.it</a></td>
+  </tr>
+  <tr> 
+    <td colspan="2" class="testog">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="1%" align="left" valign="top"><img src="contenuti/img/freccia.gif" border="0">&nbsp;</td>
+    <td class="testog" align="left" valign="top">Direttore creativo: Vincenzo D'Abbraccio<br>mail:<a class="b" href="mailto:vindab@shena.it">vindab@shena.it</a></td>
+  </tr>
+  </tr>
+  <tr> 
+    <td colspan="2" class="testog">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="1%" align="left" valign="top"><img src="contenuti/img/freccia.gif" border="0">&nbsp;</td>
+    <td class="testog" align="left" valign="top">Direttore marketing: Mauro Brambilla<br>mail:<a class="b" href="mailto:mauro@shena.it">mauro@shena.it</a></td>
+  </tr>
+  <tr> 
+    <td colspan="2" class="testog">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="1%" align="left" valign="top"><img src="contenuti/img/freccia.gif" border="0">&nbsp;</td>
+    <td class="testog" align="left" valign="top">Direttore creativo: Vincenzo D'Abbraccio<br>mail:<a class="b" href="mailto:vindab@shena.it">vindab@shena.it</a></td>
+  </tr>
+  </tr>
+  <tr> 
+    <td colspan="2" class="testog">&nbsp;</td>
+  </tr>
+  <tr> 
+  <td><img src="contenuti/img/freccia.gif" border="0">&nbsp;</td>
+    <td class="testog" align="left" valign="top">Direttore creativo: Vincenzo D'Abbraccio<br>mail:<a class="b" href="mailto:vindab@shena.it">vindab@shena.it</a></td>
+  </tr>
+  </tr>
+  <tr> 
+    <td colspan="2" class="testog">&nbsp;</td>
+  </tr>
+  <tr> 
+   <td width="1%" align="left" valign="top"><img src="contenuti/img/freccia.gif" border="0">&nbsp;</td>
+    <td class="testog" align="left" valign="top">Direttore creativo: Vincenzo D'Abbraccio<br>mail:<a class="b" href="mailto:vindab@shena.it">vindab@shena.it</a></td>
+  </tr>
+  </tr>
+  <tr> 
+    <td colspan="2" class="testog">&nbsp;</td>
+  </tr>
+</table>
+
+</SPAN></SPAN> 
+
+</body>
+</html>

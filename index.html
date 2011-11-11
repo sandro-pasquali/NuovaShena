@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+
+<script language="Javascript" src="scrollHandler.js"></script>
+<script language="Javascript">
+
+var SCROLLER = null;
+var ims = 35;
+var gone = false;
+
+var agent = navigator.userAgent.toLowerCase(); 
+var NS = (agent.indexOf('mozilla')!=-1 && agent.indexOf('spoofer')==-1 && agent.indexOf('compatible') == -1 && agent.indexOf('opera')==-1 && agent.indexOf('webtv')==-1); 
+var NS6  = (NS && (parseInt(navigator.appVersion) == 5)); 
+var MAC  = (agent.indexOf("mac")!=-1);
+var OPERA = (agent.indexOf("opera") != -1); 
+
+function go()
+  {
+    if(window.map && (window.map.closed == false)) 
+	  { 
+	    window.map.focus();
+	    return; 
+	  }
+	else
+	  {
+        var w = parseInt((screen.availWidth-775)/2);
+        window.map = window.open("setup.html","Shena","width=775,height=" + ((NS||NS6||MAC||OPERA) ? 400 : 380) + ",top=20,left=" + w + ",scrollbars=no,resizable=no,menubar=yes");
+        window.map.opener = self;
+	  }
+	return;
+  }
+
+function getRef(r)
+  {
+    var i = (document.layers) ? eval('document.'+r) : (document.getElementById) ? document.getElementById(r).style : document.all[r].style;
+    return(i);
+  }
+
+function init()
+  {
+    var r = (document.layers) ? document.BOT.document.BOTS : document.images['BOTS'];
+	var d = parseInt(Math.random()*ims);
+	d = d || 0;
+	r.src = 'images/splash/bottoms/' + d + '.jpg';
+	
+	var w = (screen.availWidth-514)/2;
+	var h = (screen.availHeight-332)/2 -90;
+	with(getRef('CVAS'))
+	  {
+	    left = w;
+		top = h;
+		visibility = 'visible';
+	  }
+	with(getRef('SCR'))
+	  {
+	    left = w+15;
+		top = h+16;
+		visibility = 'visible';
+	  }
+	with(getRef('TXT'))
+	  {
+	    left = w+15;
+		top = h+16;
+		visibility = 'visible';
+	  }
+	with(getRef('ENT'))
+	  {
+	    left = w+15;
+		top = h+148;
+		visibility = 'visible';
+	  }
+	with(getRef('BOT'))
+	  {
+	    left = w+15;
+		top = h+165;
+		visibility = 'visible';
+	  }
+
+	SCROLLER = new scrollHandler('SCROLLER','TXT',h+18,483,128,20,6);
+	SCROLLER.repeat(3,2000,'go()',0,1);
+		
+	return;
+  }
+
+</script>
+
+<link rel="stylesheet" href="general.css" type="text/css">
+	
+</head>
+
+<body bgcolor=#f7f7f7 onload="init()" scroll=no>
+
+<DIV ID="CVAS" CLASS="CANVAS"><img src="images/splash/canvas.gif"></DIV>
+
+<DIV ID="SCR" CLASS="SCROLLCANVAS"><img src="images/splash/scrollback.gif"></DIV>
+
+<DIV ID="TXT" NAME="TXT" CLASS="SCROLLTEXT">
+
+<pre>
+
+
+
+
+
+
+
+</pre>
+
+<table width="480" cellpadding=0 cellspacing=4 border=0>
+<tr><td ID="THELIST" CLASS="TESTO" valign=top align=middle>
+Alessia Barbieri<br>
+Alessandro Raimondo<br>
+Alessandro Simoni<br>
+Andrea Guerrini<br>
+Anna Fezzardi<br>
+Anna Ragnoli<br>
+Arianna Santerini<br>
+Barbara Delai<br>
+Barbara Milanese<br>
+Barbara Tosi<br>
+Bruno Tominetti<br>
+Chiara Alduini<br>
+Claudia Salvemini<br>
+Claudia Battaglia<br>
+Claudio Mattaliano<br>
+Cristina Rizzato<br>
+Cristina Sergiacomi<br>
+Daniela Esposito<br>
+Diego Cadenelli<br>
+Elisa Guerrini<br>
+Fabio Candusso<br>
+Fabio Ghidelli<br>
+Flavio Franchini<br>
+Flavio Minari<br>
+Francesca Baruffaldi<br>
+Francesco Cangiano<br>
+Franco Roma<br>
+Giancarlo Morosini<br>
+Gianpietro Fogliazza<br>
+Giorgio Roselli<br>
+Giuseppe Zipponi<br>
+Grazia Bazzini<br>
+
+</td><td ID="THELIST2" CLASS="TESTO" valign=top align=middle>
+
+Guido Alboni<br>
+Isabella Nicelli<br>
+Karen Preisler<br>
+Lorenzo Galante<br>
+Lorenzo Longoni<br>
+Luca Archetti<br>
+Luca Faustini<br>
+Luca Manzo<br>
+Lucia Corti<br>
+Luisa Bettera<br>
+Luisa Facchini<br>
+Marco Roma<br>
+Marzia Nodari<br>
+Massimiliano Bartoli<br>
+Massimiliano Luci<br>
+Mauro Brambilla<br>
+Mauro Komatar<br>
+Monia Ferrari<br>
+Nicola Lanfranchi<br>
+Palma Boninsegna<br>
+Roberto Anastasi<br>
+Sabrina Leombruno<br>
+Silvia Ghidoni<br>
+Silvia Tedoldi<br>
+Stefano Fedrigo<br>
+Stefano Zini<br>
+Stefano Casella<br>
+Susanna Piccaluga<br>
+Valentina Ferrari<br>
+Vanessa Vincenzi<br>
+Vincenzo D'abbraccio<br>
+</td></tr></table>
+
+<pre>
+
+
+
+
+
+
+
+</pre>
+
+</DIV>
+
+<DIV ID="ENT" CLASS="ENTER"><a href="javascript:go();" onfocus="blur()"><img src="images/splash/entra.gif" width=66 height=15 border=0></a></DIV>
+
+<DIV ID="BOT" CLASS="BOTTOMS"><a href="javascript:go();" onfocus="blur()"><img NAME="BOTS" ID="BOTS" src="images/dummy.gif" width=485 height=152 border=0></a></DIV>
+
+</body>
+</html>
